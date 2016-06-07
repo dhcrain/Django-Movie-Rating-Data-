@@ -20,6 +20,7 @@ def movie_import(apps, schema_editor):
                                  childrens=row[9], comedy=row[10], crime=row[11], documentry=row[12], drama=row[13],
                                  fantasy=row[14], film_noir=row[15], horror=row[16], musical=row[17], mystery=row[18],
                                  romance=row[19], sci_fi=row[20], thriller=row[21], war=row[22], western=row[23])
+    raise Exception("yay")
 
 
 def rating_import(apps, schema_editor):
@@ -28,3 +29,4 @@ def rating_import(apps, schema_editor):
         rater = csv.reader(infile, delimiter="|")
         for row in rater:
             Rating.objects.create(user_id=row[0], item_id=row[1], rating=row[2], timestamp=row[3])
+    raise Exception("yay")
