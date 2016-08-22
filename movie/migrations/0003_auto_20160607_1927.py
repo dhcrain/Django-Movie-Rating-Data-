@@ -31,7 +31,7 @@ def import_all_data(apps, schema_editor):
             movie_movie_id = Movie.objects.get(movie_id=row[1])
             Rating.objects.create(user_id=rater_user_id, item_id=movie_movie_id, rating=row[2], timestamp=row[3])
 
-    # raise Exception("1 yay")
+    # raise Exception("1 yay")      # This is a great test
 
 
 class Migration(migrations.Migration):

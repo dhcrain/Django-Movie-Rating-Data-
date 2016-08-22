@@ -46,6 +46,7 @@ class Movie(models.Model):
 
 class Rating(models.Model):
     user_id = models.ForeignKey(Rater)
+    # OR user_id = models.ForeignKey("movie.Rater")  ("app_name.Class")
     item_id = models.ForeignKey(Movie)
     rating = models.IntegerField()
     timestamp = models.IntegerField()
